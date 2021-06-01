@@ -83,6 +83,7 @@ namespace Contact_Tracing_Form
             this.nameFirstBox.Size = new System.Drawing.Size(263, 26);
             this.nameFirstBox.TabIndex = 2;
             this.nameFirstBox.TextChanged += new System.EventHandler(this.nameFirstBox_TextChanged);
+            this.nameFirstBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameFirstBox_KeyPress);
             // 
             // nameLastBox
             // 
@@ -91,6 +92,7 @@ namespace Contact_Tracing_Form
             this.nameLastBox.Name = "nameLastBox";
             this.nameLastBox.Size = new System.Drawing.Size(263, 26);
             this.nameLastBox.TabIndex = 4;
+            this.nameLastBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameLastBox_KeyPress);
             // 
             // UserName2
             // 

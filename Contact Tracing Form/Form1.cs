@@ -60,7 +60,27 @@ namespace Contact_Tracing_Form
         {
             char ch = e.KeyChar;
 
-            if(!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            if(!Char.IsDigit(ch) && ch != 8 && ch != 127)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void nameFirstBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char alpha = e.KeyChar;
+
+            if(!Char.IsLetter(alpha) && alpha != 8 && alpha != 127)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void nameLastBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char beta = e.KeyChar;
+
+            if (!Char.IsLetter(beta) && beta != 8 && beta != 127)
             {
                 e.Handled = true;
             }
