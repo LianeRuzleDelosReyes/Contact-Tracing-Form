@@ -15,10 +15,15 @@ namespace Contact_Tracing_Form
         public printForm(string first,string last, string age)
         {
             InitializeComponent();
-            nameFirstBox.Text = first;
-            nameLastBox.Text = last;
-            ageBox.Text= age;
-            byte.Parse(ageBox.Text);
+            string nameGiven = first.Trim();
+            nameFirstBox.Text = nameGiven;
+
+            string nameSurname = last.Trim();
+            nameLastBox.Text = nameSurname;
+
+
+            string ageUser = age.Trim();
+            ageBox.Text= ageUser;
         }
 
         private void printForm_Load(object sender, EventArgs e)

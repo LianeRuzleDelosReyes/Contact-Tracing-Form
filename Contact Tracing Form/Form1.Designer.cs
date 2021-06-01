@@ -51,6 +51,7 @@ namespace Contact_Tracing_Form
             this.survey = new System.Windows.Forms.Label();
             this.subBtn = new System.Windows.Forms.Button();
             this.ageBox = new System.Windows.Forms.TextBox();
+            this.ageNum3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.headerBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -459,11 +460,21 @@ namespace Contact_Tracing_Form
             this.ageBox.TabIndex = 21;
             this.ageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageBox_KeyPress);
             // 
+            // ageNum3
+            // 
+            this.ageNum3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ageNum3.Location = new System.Drawing.Point(122, 210);
+            this.ageNum3.Name = "ageNum3";
+            this.ageNum3.Size = new System.Drawing.Size(100, 26);
+            this.ageNum3.TabIndex = 22;
+            this.ageNum3.Visible = false;
+            // 
             // conTracform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 450);
+            this.Controls.Add(this.ageNum3);
             this.Controls.Add(this.ageBox);
             this.Controls.Add(this.subBtn);
             this.Controls.Add(this.checkNo);
@@ -518,6 +529,7 @@ namespace Contact_Tracing_Form
         private System.Windows.Forms.Label survey;
         private System.Windows.Forms.Button subBtn;
         private System.Windows.Forms.TextBox ageBox;
+        private System.Windows.Forms.TextBox ageNum3;
     }
 }
 

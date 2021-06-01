@@ -51,8 +51,25 @@ namespace Contact_Tracing_Form
 
         private void subBtn_Click(object sender, EventArgs e)
         {
-            printForm print = new printForm(nameFirstBox.Text,nameLastBox.Text,ageBox.Text);
-            print.ShowDialog();
+            if (ageBox.Text.Length <= 3)
+            {
+                string ageNum = ageBox.Text;
+                int ageNum1 = int.Parse(ageNum);
+
+                if((ageNum1 >= 0) && (ageNum1 <=100))
+
+                {
+                    printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageBox.Text);
+                    print.ShowDialog();
+                }
+
+
+                else
+                    MessageBox.Show("Please input valid data");
+            }
+            
+            else
+                MessageBox.Show("Please input valid data");
 
         }
 
@@ -63,6 +80,7 @@ namespace Contact_Tracing_Form
             if(!Char.IsDigit(ch) && ch != 8 && ch != 127)
             {
                 e.Handled = true;
+
             }
         }
 
@@ -70,7 +88,7 @@ namespace Contact_Tracing_Form
         {
             char alpha = e.KeyChar;
 
-            if(!Char.IsLetter(alpha) && alpha != 8 && alpha != 127)
+            if(!Char.IsLetter(alpha) && alpha != 8 && alpha != 127 && alpha != 32)
             {
                 e.Handled = true;
             }
@@ -80,7 +98,7 @@ namespace Contact_Tracing_Form
         {
             char beta = e.KeyChar;
 
-            if (!Char.IsLetter(beta) && beta != 8 && beta != 127)
+            if (!Char.IsLetter(beta) && beta != 8 && beta != 127 && beta != 32)
             {
                 e.Handled = true;
             }
