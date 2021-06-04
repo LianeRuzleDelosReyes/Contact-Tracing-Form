@@ -552,6 +552,7 @@ namespace Contact_Tracing_Form
             this.Controls.Add(this.headerBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "conTracform";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
             this.Load += new System.EventHandler(this.conTracform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.headerBox)).EndInit();
