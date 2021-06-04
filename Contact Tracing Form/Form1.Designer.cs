@@ -37,21 +37,22 @@ namespace Contact_Tracing_Form
             this.UserName2 = new System.Windows.Forms.Label();
             this.UserAge = new System.Windows.Forms.Label();
             this.UserGender = new System.Windows.Forms.Label();
-            this.checkMale = new System.Windows.Forms.CheckBox();
-            this.checkFemale = new System.Windows.Forms.CheckBox();
-            this.checkTransMale = new System.Windows.Forms.CheckBox();
-            this.checkTransFemale = new System.Windows.Forms.CheckBox();
-            this.checkClassified = new System.Windows.Forms.CheckBox();
-            this.checkOthers = new System.Windows.Forms.CheckBox();
             this.otherBox = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.countryChosen = new System.Windows.Forms.ComboBox();
             this.UserCountry = new System.Windows.Forms.Label();
-            this.checkNo = new System.Windows.Forms.CheckBox();
-            this.checkYes = new System.Windows.Forms.CheckBox();
             this.survey = new System.Windows.Forms.Label();
             this.subBtn = new System.Windows.Forms.Button();
             this.ageBox = new System.Windows.Forms.TextBox();
-            this.ageNum3 = new System.Windows.Forms.TextBox();
+            this.selectedItemBox = new System.Windows.Forms.TextBox();
+            this.checkMale = new System.Windows.Forms.RadioButton();
+            this.checkFemale = new System.Windows.Forms.RadioButton();
+            this.checkNope = new System.Windows.Forms.RadioButton();
+            this.checkOption = new System.Windows.Forms.RadioButton();
+            this.checkTransFemale = new System.Windows.Forms.RadioButton();
+            this.checkTransMale = new System.Windows.Forms.RadioButton();
+            this.checkAffirmative = new System.Windows.Forms.RadioButton();
+            this.checkNegative = new System.Windows.Forms.RadioButton();
+            this.chosenGender = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.headerBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,85 +120,25 @@ namespace Contact_Tracing_Form
             // 
             this.UserGender.AutoSize = true;
             this.UserGender.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserGender.Location = new System.Drawing.Point(12, 243);
+            this.UserGender.Location = new System.Drawing.Point(12, 254);
             this.UserGender.Name = "UserGender";
             this.UserGender.Size = new System.Drawing.Size(68, 22);
             this.UserGender.TabIndex = 7;
             this.UserGender.Text = "Gender";
             // 
-            // checkMale
-            // 
-            this.checkMale.AutoSize = true;
-            this.checkMale.Location = new System.Drawing.Point(16, 268);
-            this.checkMale.Name = "checkMale";
-            this.checkMale.Size = new System.Drawing.Size(49, 17);
-            this.checkMale.TabIndex = 8;
-            this.checkMale.Text = "Male";
-            this.checkMale.UseVisualStyleBackColor = true;
-            // 
-            // checkFemale
-            // 
-            this.checkFemale.AutoSize = true;
-            this.checkFemale.Location = new System.Drawing.Point(16, 287);
-            this.checkFemale.Name = "checkFemale";
-            this.checkFemale.Size = new System.Drawing.Size(60, 17);
-            this.checkFemale.TabIndex = 9;
-            this.checkFemale.Text = "Female";
-            this.checkFemale.UseVisualStyleBackColor = true;
-            // 
-            // checkTransMale
-            // 
-            this.checkTransMale.AutoSize = true;
-            this.checkTransMale.Location = new System.Drawing.Point(16, 310);
-            this.checkTransMale.Name = "checkTransMale";
-            this.checkTransMale.Size = new System.Drawing.Size(112, 17);
-            this.checkTransMale.TabIndex = 10;
-            this.checkTransMale.Text = "Transgender Male";
-            this.checkTransMale.UseVisualStyleBackColor = true;
-            // 
-            // checkTransFemale
-            // 
-            this.checkTransFemale.AutoSize = true;
-            this.checkTransFemale.Location = new System.Drawing.Point(16, 333);
-            this.checkTransFemale.Name = "checkTransFemale";
-            this.checkTransFemale.Size = new System.Drawing.Size(123, 17);
-            this.checkTransFemale.TabIndex = 11;
-            this.checkTransFemale.Text = "Transgender Female";
-            this.checkTransFemale.UseVisualStyleBackColor = true;
-            // 
-            // checkClassified
-            // 
-            this.checkClassified.AutoSize = true;
-            this.checkClassified.Location = new System.Drawing.Point(16, 356);
-            this.checkClassified.Name = "checkClassified";
-            this.checkClassified.Size = new System.Drawing.Size(108, 17);
-            this.checkClassified.TabIndex = 12;
-            this.checkClassified.Text = "I prefer not to say";
-            this.checkClassified.UseVisualStyleBackColor = true;
-            // 
-            // checkOthers
-            // 
-            this.checkOthers.AutoSize = true;
-            this.checkOthers.Location = new System.Drawing.Point(16, 379);
-            this.checkOthers.Name = "checkOthers";
-            this.checkOthers.Size = new System.Drawing.Size(129, 17);
-            this.checkOthers.TabIndex = 13;
-            this.checkOthers.Text = "Other (Please specify)";
-            this.checkOthers.UseVisualStyleBackColor = true;
-            // 
             // otherBox
             // 
             this.otherBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherBox.Location = new System.Drawing.Point(32, 402);
+            this.otherBox.Location = new System.Drawing.Point(36, 417);
             this.otherBox.Name = "otherBox";
             this.otherBox.Size = new System.Drawing.Size(215, 26);
             this.otherBox.TabIndex = 14;
             // 
-            // comboBox1
+            // countryChosen
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.countryChosen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.countryChosen.FormattingEnabled = true;
+            this.countryChosen.Items.AddRange(new object[] {
             "Afghanistan",
             "Albania",
             "Algeria",
@@ -394,10 +335,10 @@ namespace Contact_Tracing_Form
             "Zambia",
             "Zimbabwe",
             ""});
-            this.comboBox1.Location = new System.Drawing.Point(305, 210);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 15;
+            this.countryChosen.Location = new System.Drawing.Point(305, 210);
+            this.countryChosen.Name = "countryChosen";
+            this.countryChosen.Size = new System.Drawing.Size(121, 28);
+            this.countryChosen.TabIndex = 15;
             // 
             // UserCountry
             // 
@@ -410,31 +351,11 @@ namespace Contact_Tracing_Form
             this.UserCountry.Text = "Country";
             this.UserCountry.Click += new System.EventHandler(this.UserCountry_Click);
             // 
-            // checkNo
-            // 
-            this.checkNo.AutoSize = true;
-            this.checkNo.Location = new System.Drawing.Point(314, 287);
-            this.checkNo.Name = "checkNo";
-            this.checkNo.Size = new System.Drawing.Size(40, 17);
-            this.checkNo.TabIndex = 19;
-            this.checkNo.Text = "No";
-            this.checkNo.UseVisualStyleBackColor = true;
-            // 
-            // checkYes
-            // 
-            this.checkYes.AutoSize = true;
-            this.checkYes.Location = new System.Drawing.Point(314, 268);
-            this.checkYes.Name = "checkYes";
-            this.checkYes.Size = new System.Drawing.Size(44, 17);
-            this.checkYes.TabIndex = 18;
-            this.checkYes.Text = "Yes";
-            this.checkYes.UseVisualStyleBackColor = true;
-            // 
             // survey
             // 
             this.survey.AutoSize = true;
             this.survey.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.survey.Location = new System.Drawing.Point(310, 243);
+            this.survey.Location = new System.Drawing.Point(310, 254);
             this.survey.Name = "survey";
             this.survey.Size = new System.Drawing.Size(226, 22);
             this.survey.TabIndex = 17;
@@ -460,35 +381,133 @@ namespace Contact_Tracing_Form
             this.ageBox.TabIndex = 21;
             this.ageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageBox_KeyPress);
             // 
-            // ageNum3
+            // selectedItemBox
             // 
-            this.ageNum3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ageNum3.Location = new System.Drawing.Point(122, 210);
-            this.ageNum3.Name = "ageNum3";
-            this.ageNum3.Size = new System.Drawing.Size(100, 26);
-            this.ageNum3.TabIndex = 22;
-            this.ageNum3.Visible = false;
+            this.selectedItemBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.selectedItemBox.Location = new System.Drawing.Point(468, 210);
+            this.selectedItemBox.Name = "selectedItemBox";
+            this.selectedItemBox.Size = new System.Drawing.Size(131, 26);
+            this.selectedItemBox.TabIndex = 22;
+            this.selectedItemBox.Visible = false;
+            // 
+            // checkMale
+            // 
+            this.checkMale.AutoSize = true;
+            this.checkMale.Location = new System.Drawing.Point(16, 279);
+            this.checkMale.Name = "checkMale";
+            this.checkMale.Size = new System.Drawing.Size(48, 17);
+            this.checkMale.TabIndex = 23;
+            this.checkMale.TabStop = true;
+            this.checkMale.Text = "Male";
+            this.checkMale.UseVisualStyleBackColor = true;
+            // 
+            // checkFemale
+            // 
+            this.checkFemale.AutoSize = true;
+            this.checkFemale.Location = new System.Drawing.Point(16, 302);
+            this.checkFemale.Name = "checkFemale";
+            this.checkFemale.Size = new System.Drawing.Size(59, 17);
+            this.checkFemale.TabIndex = 24;
+            this.checkFemale.TabStop = true;
+            this.checkFemale.Text = "Female";
+            this.checkFemale.UseVisualStyleBackColor = true;
+            // 
+            // checkNope
+            // 
+            this.checkNope.AutoSize = true;
+            this.checkNope.Location = new System.Drawing.Point(16, 371);
+            this.checkNope.Name = "checkNope";
+            this.checkNope.Size = new System.Drawing.Size(122, 17);
+            this.checkNope.TabIndex = 26;
+            this.checkNope.TabStop = true;
+            this.checkNope.Text = "I do not prefer to say";
+            this.checkNope.UseVisualStyleBackColor = true;
+            // 
+            // checkOption
+            // 
+            this.checkOption.AutoSize = true;
+            this.checkOption.Location = new System.Drawing.Point(16, 394);
+            this.checkOption.Name = "checkOption";
+            this.checkOption.Size = new System.Drawing.Size(96, 17);
+            this.checkOption.TabIndex = 25;
+            this.checkOption.TabStop = true;
+            this.checkOption.Text = "Other(Optional)";
+            this.checkOption.UseVisualStyleBackColor = true;
+            // 
+            // checkTransFemale
+            // 
+            this.checkTransFemale.AutoSize = true;
+            this.checkTransFemale.Location = new System.Drawing.Point(16, 348);
+            this.checkTransFemale.Name = "checkTransFemale";
+            this.checkTransFemale.Size = new System.Drawing.Size(116, 17);
+            this.checkTransFemale.TabIndex = 28;
+            this.checkTransFemale.TabStop = true;
+            this.checkTransFemale.Text = "Transgender Fmale";
+            this.checkTransFemale.UseVisualStyleBackColor = true;
+            // 
+            // checkTransMale
+            // 
+            this.checkTransMale.AutoSize = true;
+            this.checkTransMale.Location = new System.Drawing.Point(16, 325);
+            this.checkTransMale.Name = "checkTransMale";
+            this.checkTransMale.Size = new System.Drawing.Size(111, 17);
+            this.checkTransMale.TabIndex = 27;
+            this.checkTransMale.TabStop = true;
+            this.checkTransMale.Text = "Transgender Male";
+            this.checkTransMale.UseVisualStyleBackColor = true;
+            // 
+            // checkAffirmative
+            // 
+            this.checkAffirmative.AutoSize = true;
+            this.checkAffirmative.Location = new System.Drawing.Point(314, 279);
+            this.checkAffirmative.Name = "checkAffirmative";
+            this.checkAffirmative.Size = new System.Drawing.Size(43, 17);
+            this.checkAffirmative.TabIndex = 29;
+            this.checkAffirmative.TabStop = true;
+            this.checkAffirmative.Text = "Yes";
+            this.checkAffirmative.UseVisualStyleBackColor = true;
+            // 
+            // checkNegative
+            // 
+            this.checkNegative.AutoSize = true;
+            this.checkNegative.Location = new System.Drawing.Point(314, 302);
+            this.checkNegative.Name = "checkNegative";
+            this.checkNegative.Size = new System.Drawing.Size(39, 17);
+            this.checkNegative.TabIndex = 30;
+            this.checkNegative.TabStop = true;
+            this.checkNegative.Text = "No";
+            this.checkNegative.UseVisualStyleBackColor = true;
+            // 
+            // chosenGender
+            // 
+            this.chosenGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.chosenGender.Location = new System.Drawing.Point(151, 388);
+            this.chosenGender.Name = "chosenGender";
+            this.chosenGender.Size = new System.Drawing.Size(100, 26);
+            this.chosenGender.TabIndex = 31;
+            this.chosenGender.Visible = false;
             // 
             // conTracform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 450);
-            this.Controls.Add(this.ageNum3);
-            this.Controls.Add(this.ageBox);
-            this.Controls.Add(this.subBtn);
-            this.Controls.Add(this.checkNo);
-            this.Controls.Add(this.checkYes);
-            this.Controls.Add(this.survey);
-            this.Controls.Add(this.UserCountry);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.otherBox);
-            this.Controls.Add(this.checkOthers);
-            this.Controls.Add(this.checkClassified);
+            this.ClientSize = new System.Drawing.Size(665, 458);
+            this.Controls.Add(this.chosenGender);
+            this.Controls.Add(this.checkNegative);
+            this.Controls.Add(this.checkAffirmative);
             this.Controls.Add(this.checkTransFemale);
             this.Controls.Add(this.checkTransMale);
+            this.Controls.Add(this.checkNope);
+            this.Controls.Add(this.checkOption);
             this.Controls.Add(this.checkFemale);
             this.Controls.Add(this.checkMale);
+            this.Controls.Add(this.selectedItemBox);
+            this.Controls.Add(this.ageBox);
+            this.Controls.Add(this.subBtn);
+            this.Controls.Add(this.survey);
+            this.Controls.Add(this.UserCountry);
+            this.Controls.Add(this.countryChosen);
+            this.Controls.Add(this.otherBox);
             this.Controls.Add(this.UserGender);
             this.Controls.Add(this.UserAge);
             this.Controls.Add(this.nameLastBox);
@@ -515,21 +534,22 @@ namespace Contact_Tracing_Form
         private System.Windows.Forms.Label UserName2;
         private System.Windows.Forms.Label UserAge;
         private System.Windows.Forms.Label UserGender;
-        private System.Windows.Forms.CheckBox checkMale;
-        private System.Windows.Forms.CheckBox checkFemale;
-        private System.Windows.Forms.CheckBox checkTransMale;
-        private System.Windows.Forms.CheckBox checkTransFemale;
-        private System.Windows.Forms.CheckBox checkClassified;
-        private System.Windows.Forms.CheckBox checkOthers;
         private System.Windows.Forms.TextBox otherBox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox countryChosen;
         private System.Windows.Forms.Label UserCountry;
-        private System.Windows.Forms.CheckBox checkNo;
-        private System.Windows.Forms.CheckBox checkYes;
         private System.Windows.Forms.Label survey;
         private System.Windows.Forms.Button subBtn;
         private System.Windows.Forms.TextBox ageBox;
-        private System.Windows.Forms.TextBox ageNum3;
+        private System.Windows.Forms.TextBox selectedItemBox;
+        private System.Windows.Forms.RadioButton checkMale;
+        private System.Windows.Forms.RadioButton checkFemale;
+        private System.Windows.Forms.RadioButton checkNope;
+        private System.Windows.Forms.RadioButton checkOption;
+        private System.Windows.Forms.RadioButton checkTransFemale;
+        private System.Windows.Forms.RadioButton checkTransMale;
+        private System.Windows.Forms.RadioButton checkAffirmative;
+        private System.Windows.Forms.RadioButton checkNegative;
+        private System.Windows.Forms.TextBox chosenGender;
     }
 }
 

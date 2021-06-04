@@ -12,7 +12,7 @@ namespace Contact_Tracing_Form
 {
     public partial class printForm : Form
     {
-        public printForm(string first,string last, string age)
+        public printForm(string first,string last, string age, object country, string gender)
         {
             InitializeComponent();
             string nameGiven = first.Trim();
@@ -24,6 +24,13 @@ namespace Contact_Tracing_Form
 
             string ageUser = age.Trim();
             ageBox.Text= ageUser;
+
+            string countryUser = Convert.ToString(country);
+            countryBox.Text = countryUser;
+
+            string usersGender = gender.Trim();
+            genderBox.Text = usersGender;
+
         }
 
         private void printForm_Load(object sender, EventArgs e)

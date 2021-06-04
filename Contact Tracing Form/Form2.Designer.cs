@@ -40,9 +40,9 @@ namespace Contact_Tracing_Form
             this.nameFirstBox = new System.Windows.Forms.TextBox();
             this.nameLastBox = new System.Windows.Forms.TextBox();
             this.ageBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.countryBox = new System.Windows.Forms.TextBox();
+            this.genderBox = new System.Windows.Forms.TextBox();
+            this.surveyBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.headerBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@ namespace Contact_Tracing_Form
             // 
             this.survey.AutoSize = true;
             this.survey.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.survey.Location = new System.Drawing.Point(8, 338);
+            this.survey.Location = new System.Drawing.Point(8, 372);
             this.survey.Name = "survey";
             this.survey.Size = new System.Drawing.Size(226, 22);
             this.survey.TabIndex = 38;
@@ -60,7 +60,7 @@ namespace Contact_Tracing_Form
             // 
             this.UserCountry.AutoSize = true;
             this.UserCountry.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserCountry.Location = new System.Drawing.Point(12, 229);
+            this.UserCountry.Location = new System.Drawing.Point(12, 243);
             this.UserCountry.Name = "UserCountry";
             this.UserCountry.Size = new System.Drawing.Size(75, 22);
             this.UserCountry.TabIndex = 37;
@@ -70,7 +70,7 @@ namespace Contact_Tracing_Form
             // 
             this.UserGender.AutoSize = true;
             this.UserGender.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserGender.Location = new System.Drawing.Point(12, 284);
+            this.UserGender.Location = new System.Drawing.Point(12, 308);
             this.UserGender.Name = "UserGender";
             this.UserGender.Size = new System.Drawing.Size(68, 22);
             this.UserGender.TabIndex = 28;
@@ -80,7 +80,7 @@ namespace Contact_Tracing_Form
             // 
             this.UserAge.AutoSize = true;
             this.UserAge.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserAge.Location = new System.Drawing.Point(12, 180);
+            this.UserAge.Location = new System.Drawing.Point(12, 181);
             this.UserAge.Name = "UserAge";
             this.UserAge.Size = new System.Drawing.Size(42, 22);
             this.UserAge.TabIndex = 26;
@@ -138,43 +138,43 @@ namespace Contact_Tracing_Form
             // ageBox
             // 
             this.ageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageBox.Location = new System.Drawing.Point(16, 205);
+            this.ageBox.Location = new System.Drawing.Point(16, 206);
             this.ageBox.Name = "ageBox";
             this.ageBox.Size = new System.Drawing.Size(67, 26);
             this.ageBox.TabIndex = 41;
             // 
-            // textBox2
+            // countryBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(16, 254);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(67, 26);
-            this.textBox2.TabIndex = 42;
+            this.countryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryBox.Location = new System.Drawing.Point(16, 268);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(259, 26);
+            this.countryBox.TabIndex = 42;
             // 
-            // textBox3
+            // genderBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(16, 309);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(67, 26);
-            this.textBox3.TabIndex = 43;
+            this.genderBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderBox.Location = new System.Drawing.Point(16, 333);
+            this.genderBox.Name = "genderBox";
+            this.genderBox.Size = new System.Drawing.Size(67, 26);
+            this.genderBox.TabIndex = 43;
             // 
-            // textBox1
+            // surveyBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(16, 363);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 26);
-            this.textBox1.TabIndex = 44;
+            this.surveyBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surveyBox.Location = new System.Drawing.Point(16, 397);
+            this.surveyBox.Name = "surveyBox";
+            this.surveyBox.Size = new System.Drawing.Size(67, 26);
+            this.surveyBox.TabIndex = 44;
             // 
             // printForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 434);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.surveyBox);
+            this.Controls.Add(this.genderBox);
+            this.Controls.Add(this.countryBox);
             this.Controls.Add(this.ageBox);
             this.Controls.Add(this.nameLastBox);
             this.Controls.Add(this.nameFirstBox);
@@ -206,8 +206,8 @@ namespace Contact_Tracing_Form
         private System.Windows.Forms.TextBox nameFirstBox;
         private System.Windows.Forms.TextBox nameLastBox;
         private System.Windows.Forms.TextBox ageBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox countryBox;
+        private System.Windows.Forms.TextBox genderBox;
+        private System.Windows.Forms.TextBox surveyBox;
     }
 }
