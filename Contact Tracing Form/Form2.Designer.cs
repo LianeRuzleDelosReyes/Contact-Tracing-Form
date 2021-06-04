@@ -156,7 +156,7 @@ namespace Contact_Tracing_Form
             this.genderBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderBox.Location = new System.Drawing.Point(16, 333);
             this.genderBox.Name = "genderBox";
-            this.genderBox.Size = new System.Drawing.Size(67, 26);
+            this.genderBox.Size = new System.Drawing.Size(259, 26);
             this.genderBox.TabIndex = 43;
             // 
             // surveyBox

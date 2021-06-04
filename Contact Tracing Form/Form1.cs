@@ -17,7 +17,8 @@ namespace Contact_Tracing_Form
             InitializeComponent();
         }
 
-       
+
+
 
 
 
@@ -29,7 +30,7 @@ namespace Contact_Tracing_Form
 
         private void UserName_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void UserCountry_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace Contact_Tracing_Form
 
         private void nameFirstBox_TextChanged(object sender, EventArgs e)
         {
-            
+
 
 
 
@@ -55,146 +56,488 @@ namespace Contact_Tracing_Form
             string chosenCountry1 = Convert.ToString(chosenCountry);
             selectedItemBox.Text = chosenCountry1;
 
+            optionText.Enabled = false;
 
 
-            if (checkMale.Checked)
+            if (checkAffirmative.Checked)
             {
-                string checkMale1 = checkMale.Checked.ToString();
-                chosenGender.Text = checkMale1;
+                checkNegative.Checked = false;
 
-                if (ageBox.Text.Length <= 3)
+                surveyYN.Text = "Yes";
+
+                if (checkMale.Checked)
                 {
-                    string ageNum = ageBox.Text;
-                    int ageNum1 = int.Parse(ageNum);
+                    chosenGender.Text = "Male";
 
-                    if ((ageNum1 >= 0) && (ageNum1 <= 100))
 
+                    if (ageBox.Text.Length <= 3)
                     {
 
-                        MessageBox.Show("Survey submitted. View survey.");
 
-                        printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageBox.Text, selectedItemBox.Text, chosenGender.Text);
-                        print.ShowDialog();
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
 
 
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
                     }
-
 
                     else
                         MessageBox.Show("Please input valid data");
+
                 }
 
-                else
-                    MessageBox.Show("Please input valid data");
 
-            }
 
-            else if (checkFemale.Checked)
-            {
-                string checkFemale1 = checkFemale.Checked.ToString();
-                chosenGender.Text = checkFemale1;
-
-                if (ageBox.Text.Length <= 3)
+                else if (checkFemale.Checked)
                 {
-                    string ageNum = ageBox.Text;
-                    int ageNum1 = int.Parse(ageNum);
 
-                    if ((ageNum1 >= 0) && (ageNum1 <= 100))
+                    chosenGender.Text = "Female";
 
+
+
+                    if (ageBox.Text.Length <= 3)
                     {
 
-                        MessageBox.Show("Survey submitted. View survey.");
 
-                        printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageBox.Text, selectedItemBox.Text, chosenGender.Text);
-                        print.ShowDialog();
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
 
 
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
                     }
-
 
                     else
                         MessageBox.Show("Please input valid data");
+
+
+
                 }
 
-                else
-                    MessageBox.Show("Please input valid data");
-
-
-            }
-
-
-            else if (checkTransMale.Checked)
-            {
-                string checkTransMale1 = checkTransMale.Checked.ToString();
-                chosenGender.Text = checkTransMale1;
-
-                if (ageBox.Text.Length <= 3)
+                else if (checkTransMale.Checked)
                 {
-                    string ageNum = ageBox.Text;
-                    int ageNum1 = int.Parse(ageNum);
+                    chosenGender.Text = "Transgender Male";
 
-                    if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
+                    if (ageBox.Text.Length <= 3)
                     {
 
-                        MessageBox.Show("Survey submitted. View survey.");
 
-                        printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageBox.Text, selectedItemBox.Text, chosenGender.Text);
-                        print.ShowDialog();
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
 
 
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
                     }
-
 
                     else
                         MessageBox.Show("Please input valid data");
+
                 }
 
-                else
-                    MessageBox.Show("Please input valid data");
+                else if (checkTransFemale.Checked)
+                {
+                    chosenGender.Text = "Transgender Female";
 
+
+                    if (ageBox.Text.Length <= 3)
+                    {
+
+
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
+
+
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
+
+                else if (checkNope.Checked)
+                {
+
+                    chosenGender.Text = "I don't prefer to say";
+
+
+                    if (ageBox.Text.Length <= 3)
+                    {
+
+
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
+
+
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
+
+                else if (checkOption.Checked)
+                {
+                    optionText.Enabled = true;
+                    optionText.Text = "";
+                    chosenGender.Text = optionText.Text;
+
+
+                    if (ageBox.Text.Length <= 3)
+                    {
+
+
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
+
+
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
 
             }
 
+            else
+                checkNegative.Checked = true;
 
 
 
 
+            if (checkNegative.Checked)
+            {
+                surveyYN.Text = "No";
+
+                if (checkMale.Checked)
+                {
+                    chosenGender.Text = "Male";
 
 
-            //if (checkMale.Checked)
-            //{
-            //    string male
+                    if (ageBox.Text.Length <= 3)
+                    {
 
 
-            //}
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
 
-            //else if ( )
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
 
+                        {
 
+                            MessageBox.Show("Survey submitted. View survey.");
 
-
-
-
-
-
-
+                            ageOut.Text = ageNum1.ToString();
 
 
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
 
 
 
+                else if (checkFemale.Checked)
+                {
+
+                    chosenGender.Text = "Female";
 
 
 
+                    if (ageBox.Text.Length <= 3)
+                    {
+
+
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
+
+
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
 
 
 
+                }
+
+                else if (checkTransMale.Checked)
+                {
+                    chosenGender.Text = "Transgender Male";
+
+                    if (ageBox.Text.Length <= 3)
+                    {
 
 
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
 
 
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
 
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
+
+                else if (checkTransFemale.Checked)
+                {
+                    chosenGender.Text = "Transgender Female";
+
+
+                    if (ageBox.Text.Length <= 3)
+                    {
+
+
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
+
+
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
+
+                else if (checkNope.Checked)
+                {
+
+                    chosenGender.Text = "I don't prefer to say";
+
+
+                    if (ageBox.Text.Length <= 3)
+                    {
+
+
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
+
+
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
+
+                else if (checkOption.Checked)
+                {
+                    optionText.Enabled = true;
+                    optionText.Text = "";
+                    chosenGender.Text = optionText.Text;
+
+
+                    if (ageBox.Text.Length <= 3)
+                    {
+
+
+                        string ageNum = ageBox.Text;
+                        int ageNum1 = int.Parse(ageNum);
+
+                        if ((ageNum1 >= 0) && (ageNum1 <= 100))
+
+                        {
+
+                            MessageBox.Show("Survey submitted. View survey.");
+
+                            ageOut.Text = ageNum1.ToString();
+
+
+                            printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text);
+                            print.ShowDialog();
+
+
+                        }
+
+
+                        else
+                            MessageBox.Show("Please input valid data");
+                    }
+
+                    else
+                        MessageBox.Show("Please input valid data");
+
+                }
+            }
+            
 
         }
 
@@ -202,7 +545,7 @@ namespace Contact_Tracing_Form
         {
             char ch = e.KeyChar;
 
-            if(!Char.IsDigit(ch) && ch != 8 && ch != 127)
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 127)
             {
                 e.Handled = true;
 
@@ -213,7 +556,7 @@ namespace Contact_Tracing_Form
         {
             char alpha = e.KeyChar;
 
-            if(!Char.IsLetter(alpha) && alpha != 8 && alpha != 127 && alpha != 32)
+            if (!Char.IsLetter(alpha) && alpha != 8 && alpha != 127 && alpha != 32)
             {
                 e.Handled = true;
             }
@@ -228,12 +571,14 @@ namespace Contact_Tracing_Form
                 e.Handled = true;
             }
         }
-    }
 
         
-        
+
+
+
 
     }
+}
 
 
 

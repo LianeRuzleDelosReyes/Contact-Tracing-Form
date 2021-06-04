@@ -37,7 +37,6 @@ namespace Contact_Tracing_Form
             this.UserName2 = new System.Windows.Forms.Label();
             this.UserAge = new System.Windows.Forms.Label();
             this.UserGender = new System.Windows.Forms.Label();
-            this.otherBox = new System.Windows.Forms.TextBox();
             this.countryChosen = new System.Windows.Forms.ComboBox();
             this.UserCountry = new System.Windows.Forms.Label();
             this.survey = new System.Windows.Forms.Label();
@@ -50,10 +49,15 @@ namespace Contact_Tracing_Form
             this.checkOption = new System.Windows.Forms.RadioButton();
             this.checkTransFemale = new System.Windows.Forms.RadioButton();
             this.checkTransMale = new System.Windows.Forms.RadioButton();
+            this.chosenGender = new System.Windows.Forms.TextBox();
+            this.ageOut = new System.Windows.Forms.TextBox();
+            this.optionText = new System.Windows.Forms.TextBox();
+            this.surveyYN = new System.Windows.Forms.TextBox();
             this.checkAffirmative = new System.Windows.Forms.RadioButton();
             this.checkNegative = new System.Windows.Forms.RadioButton();
-            this.chosenGender = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.headerBox)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerBox
@@ -126,16 +130,10 @@ namespace Contact_Tracing_Form
             this.UserGender.TabIndex = 7;
             this.UserGender.Text = "Gender";
             // 
-            // otherBox
-            // 
-            this.otherBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherBox.Location = new System.Drawing.Point(36, 417);
-            this.otherBox.Name = "otherBox";
-            this.otherBox.Size = new System.Drawing.Size(215, 26);
-            this.otherBox.TabIndex = 14;
-            // 
             // countryChosen
             // 
+            this.countryChosen.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.countryChosen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.countryChosen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.countryChosen.FormattingEnabled = true;
             this.countryChosen.Items.AddRange(new object[] {
@@ -428,10 +426,10 @@ namespace Contact_Tracing_Form
             this.checkOption.AutoSize = true;
             this.checkOption.Location = new System.Drawing.Point(16, 394);
             this.checkOption.Name = "checkOption";
-            this.checkOption.Size = new System.Drawing.Size(96, 17);
+            this.checkOption.Size = new System.Drawing.Size(51, 17);
             this.checkOption.TabIndex = 25;
             this.checkOption.TabStop = true;
-            this.checkOption.Text = "Other(Optional)";
+            this.checkOption.Text = "Other";
             this.checkOption.UseVisualStyleBackColor = true;
             // 
             // checkTransFemale
@@ -439,10 +437,10 @@ namespace Contact_Tracing_Form
             this.checkTransFemale.AutoSize = true;
             this.checkTransFemale.Location = new System.Drawing.Point(16, 348);
             this.checkTransFemale.Name = "checkTransFemale";
-            this.checkTransFemale.Size = new System.Drawing.Size(116, 17);
+            this.checkTransFemale.Size = new System.Drawing.Size(122, 17);
             this.checkTransFemale.TabIndex = 28;
             this.checkTransFemale.TabStop = true;
-            this.checkTransFemale.Text = "Transgender Fmale";
+            this.checkTransFemale.Text = "Transgender Female";
             this.checkTransFemale.UseVisualStyleBackColor = true;
             // 
             // checkTransMale
@@ -456,28 +454,6 @@ namespace Contact_Tracing_Form
             this.checkTransMale.Text = "Transgender Male";
             this.checkTransMale.UseVisualStyleBackColor = true;
             // 
-            // checkAffirmative
-            // 
-            this.checkAffirmative.AutoSize = true;
-            this.checkAffirmative.Location = new System.Drawing.Point(314, 279);
-            this.checkAffirmative.Name = "checkAffirmative";
-            this.checkAffirmative.Size = new System.Drawing.Size(43, 17);
-            this.checkAffirmative.TabIndex = 29;
-            this.checkAffirmative.TabStop = true;
-            this.checkAffirmative.Text = "Yes";
-            this.checkAffirmative.UseVisualStyleBackColor = true;
-            // 
-            // checkNegative
-            // 
-            this.checkNegative.AutoSize = true;
-            this.checkNegative.Location = new System.Drawing.Point(314, 302);
-            this.checkNegative.Name = "checkNegative";
-            this.checkNegative.Size = new System.Drawing.Size(39, 17);
-            this.checkNegative.TabIndex = 30;
-            this.checkNegative.TabStop = true;
-            this.checkNegative.Text = "No";
-            this.checkNegative.UseVisualStyleBackColor = true;
-            // 
             // chosenGender
             // 
             this.chosenGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -487,14 +463,74 @@ namespace Contact_Tracing_Form
             this.chosenGender.TabIndex = 31;
             this.chosenGender.Visible = false;
             // 
+            // ageOut
+            // 
+            this.ageOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ageOut.Location = new System.Drawing.Point(122, 212);
+            this.ageOut.Name = "ageOut";
+            this.ageOut.Size = new System.Drawing.Size(100, 26);
+            this.ageOut.TabIndex = 32;
+            this.ageOut.Visible = false;
+            // 
+            // optionText
+            // 
+            this.optionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.optionText.Location = new System.Drawing.Point(31, 417);
+            this.optionText.Name = "optionText";
+            this.optionText.Size = new System.Drawing.Size(202, 26);
+            this.optionText.TabIndex = 33;
+            // 
+            // surveyYN
+            // 
+            this.surveyYN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.surveyYN.Location = new System.Drawing.Point(6, 56);
+            this.surveyYN.Name = "surveyYN";
+            this.surveyYN.Size = new System.Drawing.Size(84, 26);
+            this.surveyYN.TabIndex = 34;
+            this.surveyYN.Visible = false;
+            // 
+            // checkAffirmative
+            // 
+            this.checkAffirmative.AutoSize = true;
+            this.checkAffirmative.Location = new System.Drawing.Point(6, 10);
+            this.checkAffirmative.Name = "checkAffirmative";
+            this.checkAffirmative.Size = new System.Drawing.Size(43, 17);
+            this.checkAffirmative.TabIndex = 37;
+            this.checkAffirmative.TabStop = true;
+            this.checkAffirmative.Text = "Yes";
+            this.checkAffirmative.UseVisualStyleBackColor = true;
+            // 
+            // checkNegative
+            // 
+            this.checkNegative.AutoSize = true;
+            this.checkNegative.Location = new System.Drawing.Point(6, 33);
+            this.checkNegative.Name = "checkNegative";
+            this.checkNegative.Size = new System.Drawing.Size(39, 17);
+            this.checkNegative.TabIndex = 38;
+            this.checkNegative.TabStop = true;
+            this.checkNegative.Text = "No";
+            this.checkNegative.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkAffirmative);
+            this.groupBox1.Controls.Add(this.surveyYN);
+            this.groupBox1.Controls.Add(this.checkNegative);
+            this.groupBox1.Location = new System.Drawing.Point(314, 279);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(97, 86);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
+            // 
             // conTracform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 458);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.optionText);
+            this.Controls.Add(this.ageOut);
             this.Controls.Add(this.chosenGender);
-            this.Controls.Add(this.checkNegative);
-            this.Controls.Add(this.checkAffirmative);
             this.Controls.Add(this.checkTransFemale);
             this.Controls.Add(this.checkTransMale);
             this.Controls.Add(this.checkNope);
@@ -507,7 +543,6 @@ namespace Contact_Tracing_Form
             this.Controls.Add(this.survey);
             this.Controls.Add(this.UserCountry);
             this.Controls.Add(this.countryChosen);
-            this.Controls.Add(this.otherBox);
             this.Controls.Add(this.UserGender);
             this.Controls.Add(this.UserAge);
             this.Controls.Add(this.nameLastBox);
@@ -520,6 +555,8 @@ namespace Contact_Tracing_Form
             this.Text = "  ";
             this.Load += new System.EventHandler(this.conTracform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.headerBox)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,7 +571,6 @@ namespace Contact_Tracing_Form
         private System.Windows.Forms.Label UserName2;
         private System.Windows.Forms.Label UserAge;
         private System.Windows.Forms.Label UserGender;
-        private System.Windows.Forms.TextBox otherBox;
         private System.Windows.Forms.ComboBox countryChosen;
         private System.Windows.Forms.Label UserCountry;
         private System.Windows.Forms.Label survey;
@@ -547,9 +583,13 @@ namespace Contact_Tracing_Form
         private System.Windows.Forms.RadioButton checkOption;
         private System.Windows.Forms.RadioButton checkTransFemale;
         private System.Windows.Forms.RadioButton checkTransMale;
+        private System.Windows.Forms.TextBox chosenGender;
+        private System.Windows.Forms.TextBox ageOut;
+        private System.Windows.Forms.TextBox optionText;
+        private System.Windows.Forms.TextBox surveyYN;
         private System.Windows.Forms.RadioButton checkAffirmative;
         private System.Windows.Forms.RadioButton checkNegative;
-        private System.Windows.Forms.TextBox chosenGender;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
