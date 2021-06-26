@@ -56,6 +56,10 @@ namespace Contact_Tracing_Form
             this.checkAffirmative = new System.Windows.Forms.RadioButton();
             this.checkNegative = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.contNum = new System.Windows.Forms.Label();
+            this.Address = new System.Windows.Forms.Label();
+            this.contNumtxt = new System.Windows.Forms.TextBox();
+            this.addressTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.headerBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -63,9 +67,9 @@ namespace Contact_Tracing_Form
             // headerBox
             // 
             this.headerBox.Image = ((System.Drawing.Image)(resources.GetObject("headerBox.Image")));
-            this.headerBox.Location = new System.Drawing.Point(12, 12);
+            this.headerBox.Location = new System.Drawing.Point(2, 12);
             this.headerBox.Name = "headerBox";
-            this.headerBox.Size = new System.Drawing.Size(641, 91);
+            this.headerBox.Size = new System.Drawing.Size(780, 91);
             this.headerBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.headerBox.TabIndex = 0;
             this.headerBox.TabStop = false;
@@ -114,7 +118,7 @@ namespace Contact_Tracing_Form
             // 
             this.UserAge.AutoSize = true;
             this.UserAge.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserAge.Location = new System.Drawing.Point(12, 180);
+            this.UserAge.Location = new System.Drawing.Point(585, 117);
             this.UserAge.Name = "UserAge";
             this.UserAge.Size = new System.Drawing.Size(42, 22);
             this.UserAge.TabIndex = 5;
@@ -124,7 +128,7 @@ namespace Contact_Tracing_Form
             // 
             this.UserGender.AutoSize = true;
             this.UserGender.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserGender.Location = new System.Drawing.Point(12, 254);
+            this.UserGender.Location = new System.Drawing.Point(8, 180);
             this.UserGender.Name = "UserGender";
             this.UserGender.Size = new System.Drawing.Size(68, 22);
             this.UserGender.TabIndex = 7;
@@ -333,7 +337,7 @@ namespace Contact_Tracing_Form
             "Zambia",
             "Zimbabwe",
             ""});
-            this.countryChosen.Location = new System.Drawing.Point(305, 210);
+            this.countryChosen.Location = new System.Drawing.Point(305, 343);
             this.countryChosen.Name = "countryChosen";
             this.countryChosen.Size = new System.Drawing.Size(121, 28);
             this.countryChosen.TabIndex = 15;
@@ -342,7 +346,7 @@ namespace Contact_Tracing_Form
             // 
             this.UserCountry.AutoSize = true;
             this.UserCountry.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserCountry.Location = new System.Drawing.Point(310, 185);
+            this.UserCountry.Location = new System.Drawing.Point(301, 316);
             this.UserCountry.Name = "UserCountry";
             this.UserCountry.Size = new System.Drawing.Size(75, 22);
             this.UserCountry.TabIndex = 16;
@@ -353,7 +357,7 @@ namespace Contact_Tracing_Form
             // 
             this.survey.AutoSize = true;
             this.survey.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.survey.Location = new System.Drawing.Point(310, 254);
+            this.survey.Location = new System.Drawing.Point(556, 180);
             this.survey.Name = "survey";
             this.survey.Size = new System.Drawing.Size(226, 22);
             this.survey.TabIndex = 17;
@@ -362,7 +366,7 @@ namespace Contact_Tracing_Form
             // subBtn
             // 
             this.subBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
-            this.subBtn.Location = new System.Drawing.Point(483, 399);
+            this.subBtn.Location = new System.Drawing.Point(614, 338);
             this.subBtn.Name = "subBtn";
             this.subBtn.Size = new System.Drawing.Size(160, 33);
             this.subBtn.TabIndex = 20;
@@ -373,25 +377,26 @@ namespace Contact_Tracing_Form
             // ageBox
             // 
             this.ageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ageBox.Location = new System.Drawing.Point(16, 210);
+            this.ageBox.Location = new System.Drawing.Point(589, 142);
             this.ageBox.Name = "ageBox";
-            this.ageBox.Size = new System.Drawing.Size(100, 26);
+            this.ageBox.Size = new System.Drawing.Size(70, 26);
             this.ageBox.TabIndex = 21;
+            this.ageBox.TextChanged += new System.EventHandler(this.ageBox_TextChanged);
             this.ageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageBox_KeyPress);
             // 
             // selectedItemBox
             // 
             this.selectedItemBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.selectedItemBox.Location = new System.Drawing.Point(468, 210);
+            this.selectedItemBox.Location = new System.Drawing.Point(439, 341);
             this.selectedItemBox.Name = "selectedItemBox";
-            this.selectedItemBox.Size = new System.Drawing.Size(131, 26);
+            this.selectedItemBox.Size = new System.Drawing.Size(41, 26);
             this.selectedItemBox.TabIndex = 22;
             this.selectedItemBox.Visible = false;
             // 
             // checkMale
             // 
             this.checkMale.AutoSize = true;
-            this.checkMale.Location = new System.Drawing.Point(16, 279);
+            this.checkMale.Location = new System.Drawing.Point(12, 205);
             this.checkMale.Name = "checkMale";
             this.checkMale.Size = new System.Drawing.Size(48, 17);
             this.checkMale.TabIndex = 23;
@@ -402,7 +407,7 @@ namespace Contact_Tracing_Form
             // checkFemale
             // 
             this.checkFemale.AutoSize = true;
-            this.checkFemale.Location = new System.Drawing.Point(16, 302);
+            this.checkFemale.Location = new System.Drawing.Point(12, 228);
             this.checkFemale.Name = "checkFemale";
             this.checkFemale.Size = new System.Drawing.Size(59, 17);
             this.checkFemale.TabIndex = 24;
@@ -413,7 +418,7 @@ namespace Contact_Tracing_Form
             // checkNope
             // 
             this.checkNope.AutoSize = true;
-            this.checkNope.Location = new System.Drawing.Point(16, 371);
+            this.checkNope.Location = new System.Drawing.Point(12, 297);
             this.checkNope.Name = "checkNope";
             this.checkNope.Size = new System.Drawing.Size(122, 17);
             this.checkNope.TabIndex = 26;
@@ -424,7 +429,7 @@ namespace Contact_Tracing_Form
             // checkOption
             // 
             this.checkOption.AutoSize = true;
-            this.checkOption.Location = new System.Drawing.Point(16, 394);
+            this.checkOption.Location = new System.Drawing.Point(12, 320);
             this.checkOption.Name = "checkOption";
             this.checkOption.Size = new System.Drawing.Size(51, 17);
             this.checkOption.TabIndex = 25;
@@ -435,7 +440,7 @@ namespace Contact_Tracing_Form
             // checkTransFemale
             // 
             this.checkTransFemale.AutoSize = true;
-            this.checkTransFemale.Location = new System.Drawing.Point(16, 348);
+            this.checkTransFemale.Location = new System.Drawing.Point(12, 274);
             this.checkTransFemale.Name = "checkTransFemale";
             this.checkTransFemale.Size = new System.Drawing.Size(122, 17);
             this.checkTransFemale.TabIndex = 28;
@@ -446,7 +451,7 @@ namespace Contact_Tracing_Form
             // checkTransMale
             // 
             this.checkTransMale.AutoSize = true;
-            this.checkTransMale.Location = new System.Drawing.Point(16, 325);
+            this.checkTransMale.Location = new System.Drawing.Point(12, 251);
             this.checkTransMale.Name = "checkTransMale";
             this.checkTransMale.Size = new System.Drawing.Size(111, 17);
             this.checkTransMale.TabIndex = 27;
@@ -457,7 +462,7 @@ namespace Contact_Tracing_Form
             // chosenGender
             // 
             this.chosenGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.chosenGender.Location = new System.Drawing.Point(151, 388);
+            this.chosenGender.Location = new System.Drawing.Point(147, 314);
             this.chosenGender.Name = "chosenGender";
             this.chosenGender.Size = new System.Drawing.Size(100, 26);
             this.chosenGender.TabIndex = 31;
@@ -466,16 +471,16 @@ namespace Contact_Tracing_Form
             // ageOut
             // 
             this.ageOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ageOut.Location = new System.Drawing.Point(122, 212);
+            this.ageOut.Location = new System.Drawing.Point(665, 142);
             this.ageOut.Name = "ageOut";
-            this.ageOut.Size = new System.Drawing.Size(100, 26);
+            this.ageOut.Size = new System.Drawing.Size(38, 26);
             this.ageOut.TabIndex = 32;
             this.ageOut.Visible = false;
             // 
             // optionText
             // 
             this.optionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.optionText.Location = new System.Drawing.Point(31, 417);
+            this.optionText.Location = new System.Drawing.Point(27, 343);
             this.optionText.Name = "optionText";
             this.optionText.Size = new System.Drawing.Size(202, 26);
             this.optionText.TabIndex = 33;
@@ -516,17 +521,59 @@ namespace Contact_Tracing_Form
             this.groupBox1.Controls.Add(this.checkAffirmative);
             this.groupBox1.Controls.Add(this.surveyYN);
             this.groupBox1.Controls.Add(this.checkNegative);
-            this.groupBox1.Location = new System.Drawing.Point(314, 279);
+            this.groupBox1.Location = new System.Drawing.Point(560, 205);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(97, 86);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             // 
+            // contNum
+            // 
+            this.contNum.AutoSize = true;
+            this.contNum.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contNum.Location = new System.Drawing.Point(301, 180);
+            this.contNum.Name = "contNum";
+            this.contNum.Size = new System.Drawing.Size(145, 22);
+            this.contNum.TabIndex = 40;
+            this.contNum.Text = "Contact Number";
+            // 
+            // Address
+            // 
+            this.Address.AutoSize = true;
+            this.Address.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address.Location = new System.Drawing.Point(301, 246);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(149, 22);
+            this.Address.TabIndex = 41;
+            this.Address.Text = "Address(Present)";
+            // 
+            // contNumtxt
+            // 
+            this.contNumtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contNumtxt.Location = new System.Drawing.Point(305, 207);
+            this.contNumtxt.Name = "contNumtxt";
+            this.contNumtxt.Size = new System.Drawing.Size(205, 26);
+            this.contNumtxt.TabIndex = 42;
+            this.contNumtxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.contNumtxt_KeyPress);
+            // 
+            // addressTxt
+            // 
+            this.addressTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTxt.Location = new System.Drawing.Point(305, 274);
+            this.addressTxt.Multiline = true;
+            this.addressTxt.Name = "addressTxt";
+            this.addressTxt.Size = new System.Drawing.Size(249, 31);
+            this.addressTxt.TabIndex = 43;
+            // 
             // conTracform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 458);
+            this.ClientSize = new System.Drawing.Size(786, 384);
+            this.Controls.Add(this.addressTxt);
+            this.Controls.Add(this.contNumtxt);
+            this.Controls.Add(this.Address);
+            this.Controls.Add(this.contNum);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.optionText);
             this.Controls.Add(this.ageOut);
@@ -591,6 +638,10 @@ namespace Contact_Tracing_Form
         private System.Windows.Forms.RadioButton checkAffirmative;
         private System.Windows.Forms.RadioButton checkNegative;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label contNum;
+        private System.Windows.Forms.Label Address;
+        private System.Windows.Forms.TextBox contNumtxt;
+        private System.Windows.Forms.TextBox addressTxt;
     }
 }
 
