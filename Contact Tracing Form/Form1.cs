@@ -16,37 +16,22 @@ namespace Contact_Tracing_Form
         {
             InitializeComponent();
         }
-
-
-
         private void conTracform_Load(object sender, EventArgs e)
         {
 
         }
-
-
         private void UserName_Click(object sender, EventArgs e)
         {
 
         }
-
         private void UserCountry_Click(object sender, EventArgs e)
         {
 
         }
-
         private void nameFirstBox_TextChanged(object sender, EventArgs e)
         {
 
-
-
-
-
-
-
-
         }
-
         private void subBtn_Click(object sender, EventArgs e)
         {
             object chosenCountry = countryChosen.SelectedItem;
@@ -54,7 +39,6 @@ namespace Contact_Tracing_Form
             selectedItemBox.Text = chosenCountry1;
 
             optionText.Enabled = false;
-
 
             if (checkAffirmative.Checked)
             {
@@ -64,9 +48,7 @@ namespace Contact_Tracing_Form
 
                 if (checkMale.Checked)
                 {
-
                     chosenGender.Text = "Male";
-
 
                     if (ageBox.Text.Length <= 3)
                     {
@@ -76,45 +58,33 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
                         }
+
                         catch
                         {
 
                         }
-
                         
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
-
-
 
                 else if (checkFemale.Checked)
                 {
-
                     chosenGender.Text = "Female";
-
-
 
                     if (ageBox.Text.Length <= 3)
                     {
@@ -124,20 +94,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -146,16 +110,11 @@ namespace Contact_Tracing_Form
                         catch
                         {
 
-                        }
-
-                        
+                        } 
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
-
-
                 }
 
                 else if (checkTransMale.Checked)
@@ -170,20 +129,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -192,21 +145,17 @@ namespace Contact_Tracing_Form
                         catch
                         {
 
-                        }
-
-                        
+                        }                       
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
 
                 else if (checkTransFemale.Checked)
                 {
                     chosenGender.Text = "Transgender Female";
 
-
                     if (ageBox.Text.Length <= 3)
                     {
                         try
@@ -215,20 +164,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -237,20 +180,16 @@ namespace Contact_Tracing_Form
                         catch
                         {
 
-                        }
-                        
+                        }                       
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
 
                 else if (checkNope.Checked)
                 {
-
                     chosenGender.Text = "I don't prefer to say";
-
 
                     if (ageBox.Text.Length <= 3)
                     {
@@ -260,20 +199,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -282,14 +215,11 @@ namespace Contact_Tracing_Form
                         catch
                         {
 
-                        }
-
-                       
+                        }                     
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
 
                 else if (checkOption.Checked)
@@ -298,7 +228,6 @@ namespace Contact_Tracing_Form
                     optionText.Text = "";
                     chosenGender.Text = optionText.Text;
 
-
                     if (ageBox.Text.Length <= 3)
                     {
                         try
@@ -307,20 +236,15 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
 
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -330,22 +254,16 @@ namespace Contact_Tracing_Form
                         {
 
                         }
-
                        
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
-
             }
 
             else
                 checkNegative.Checked = true;
-
-
-
 
             if (checkNegative.Checked)
             {
@@ -355,7 +273,6 @@ namespace Contact_Tracing_Form
                 {
                     chosenGender.Text = "Male";
 
-
                     if (ageBox.Text.Length <= 3)
                     {
                         try
@@ -364,20 +281,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -386,48 +297,33 @@ namespace Contact_Tracing_Form
                         catch
                         {
 
-                        }
-
-                        
+                        }                       
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
-
-
 
                 else if (checkFemale.Checked)
                 {
-
                     chosenGender.Text = "Female";
-
-
 
                     if (ageBox.Text.Length <= 3)
                     {
                         try
                         {
-
                             string ageNum = ageBox.Text;
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -437,15 +333,10 @@ namespace Contact_Tracing_Form
                         {
 
                         }
-
-
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
-
-
                 }
 
                 else if (checkTransMale.Checked)
@@ -460,20 +351,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -482,21 +367,17 @@ namespace Contact_Tracing_Form
                         catch
                         {
 
-                        }
-
-                        
+                        }                        
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
 
                 else if (checkTransFemale.Checked)
                 {
                     chosenGender.Text = "Transgender Female";
 
-
                     if (ageBox.Text.Length <= 3)
                     {
                         try
@@ -505,9 +386,7 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
@@ -515,10 +394,7 @@ namespace Contact_Tracing_Form
 
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -528,20 +404,15 @@ namespace Contact_Tracing_Form
                         {
 
                         }
-
-
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
 
                 else if (checkNope.Checked)
                 {
-
                     chosenGender.Text = "I don't prefer to say";
-
 
                     if (ageBox.Text.Length <= 3)
                     {
@@ -551,20 +422,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -576,10 +441,8 @@ namespace Contact_Tracing_Form
                         }
                     }
 
-
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
 
                 else if (checkOption.Checked)
@@ -588,7 +451,6 @@ namespace Contact_Tracing_Form
                     optionText.Text = "";
                     chosenGender.Text = optionText.Text;
 
-
                     if (ageBox.Text.Length <= 3)
                     {
                         try
@@ -597,20 +459,14 @@ namespace Contact_Tracing_Form
                             int ageNum1 = int.Parse(ageNum);
 
                             if ((ageNum1 >= 0) && (ageNum1 <= 100))
-
                             {
-
                                 MessageBox.Show("Survey submitted. View survey.");
 
                                 ageOut.Text = ageNum1.ToString();
 
-
                                 printForm print = new printForm(nameFirstBox.Text, nameLastBox.Text, ageOut.Text, selectedItemBox.Text, chosenGender.Text, surveyYN.Text, contNumtxt.Text, addressTxt.Text);
                                 print.ShowDialog();
-
-
                             }
-
 
                             else
                                 MessageBox.Show("Please input valid data");
@@ -619,18 +475,14 @@ namespace Contact_Tracing_Form
                         catch
                         {
 
-                        }
-
-                        
+                        }                        
                     }
 
                     else
                         MessageBox.Show("Please input valid data");
-
                 }
             }
             
-
         }
 
         private void ageBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -640,7 +492,6 @@ namespace Contact_Tracing_Form
             if (!Char.IsDigit(ch) && ch != 8 && ch != 127)
             {
                 e.Handled = true;
-
             }
         }
 
@@ -676,7 +527,6 @@ namespace Contact_Tracing_Form
             if (!Char.IsDigit(ch) && ch != 8 && ch != 127)
             {
                 e.Handled = true;
-
             }
         }
     }

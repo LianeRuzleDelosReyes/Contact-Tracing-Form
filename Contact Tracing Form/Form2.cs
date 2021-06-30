@@ -41,11 +41,7 @@ namespace Contact_Tracing_Form
             string addressUser = address.Trim();
             addressTxt2.Text = addressUser;
             addressTxt2.CharacterCasing = CharacterCasing.Upper;
-
-
-           
         }
-
         private void printForm_Load(object sender, EventArgs e)
         {
 
